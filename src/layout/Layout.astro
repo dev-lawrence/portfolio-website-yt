@@ -3,6 +3,7 @@ import '@fontsource/poppins';
 import '../styles/global.css';
 import Header from '../components/Header';
 import { ViewTransitions } from 'astro:transitions';
+import Contact from '../sections/Contact.astro';
 
 interface Props {
   title?: string;
@@ -35,5 +36,6 @@ const {
   <body>
     <Header client:load />
     <slot />
+    <Contact />
   </body>
 </html>
