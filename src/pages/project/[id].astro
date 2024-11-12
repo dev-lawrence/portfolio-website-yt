@@ -3,6 +3,8 @@ import { getCollection } from 'astro:content';
 import Layout from '../../layout/Layout.astro';
 import { Image } from 'astro:assets';
 
+export const prerender = true;
+
 export async function getStaticPaths() {
   const projects = await getCollection('projects');
 
@@ -18,8 +20,6 @@ const {
   title,
   mainImage,
   otherImages,
-  client,
-  work,
   storyTitle,
   storyContent,
   dayOneTitle,
